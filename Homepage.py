@@ -5,12 +5,14 @@ import streamlit as st
 st.set_page_config(
     page_title="TA Chatbot",
     page_icon="🤖",
+    layout="wide",  # Adjust layout as needed
+    initial_sidebar_state="expanded",  # Expand the sidebar by default
 )
 
 # Define the paths to your pages
 page_dir = "Pages"
-page_files = os.listdir(page_dir)
-page_paths = {file[:-3]: os.path.join(page_dir, file) for file in page_files if file.endswith(".py")}
+page_files = [file for file in os.listdir(page_dir) if file.endswith(".py")]
+page_paths = {file[:-3]: os.path.join(page_dir, file) for file in page_files}
 
 # Display the title and header
 st.title("Main Page")
