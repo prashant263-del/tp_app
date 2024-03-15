@@ -8,7 +8,7 @@ st.set_page_config(
 
 # Define the paths to your pages
 page_paths = {
-    "Page 1": "/Pages/Chatbot.py",
+    "Page 1": "./Pages/Chatbot.py",
     "Page 2": "/path/to/your/page2.py",
     "Page 3": "/path/to/your/page3.py",
 }
